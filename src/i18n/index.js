@@ -15,6 +15,7 @@ import ptBR from './pt-br.json'
 import ru from './ru.json'
 import zhCN from './zh-cn.json'
 import zhTW from './zh-tw.json'
+import tr from './tr.json'
 
 Vue.use(VueI18n)
 
@@ -32,6 +33,9 @@ export function detectLocale () {
       break
     case /^pt.*/i.test(locale):
       locale = 'pt'
+      break
+    case /^tr.*/i.test(locale):
+      locale = 'tr'
       break
     case /^pt-BR.*/i.test(locale):
       locale = 'pt-br'
@@ -79,6 +83,7 @@ const i18n = new VueI18n({
     'en': en,
     'es': es,
     'fr': fr,
+    'tr': tr,
     'it': it,
     'ja': ja,
     'ko': ko,

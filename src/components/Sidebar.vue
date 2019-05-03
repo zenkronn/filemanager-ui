@@ -23,11 +23,6 @@
           <i class="material-icons">settings_applications</i>
           <span>{{ $t('sidebar.settings') }}</span>
         </router-link>
-
-        <button v-if="!noAuth" @click="logout" class="action" id="logout" :aria-label="$t('sidebar.logout')" :title="$t('sidebar.logout')">
-          <i class="material-icons">exit_to_app</i>
-          <span>{{ $t('sidebar.logout') }}</span>
-        </button>
       </div>
     </template>
     <template v-else>
@@ -43,11 +38,6 @@
     </template>
 
     <p class="credits">
-      <span>
-        <span v-if="disableExternal">File Browser</span>
-        <a v-else rel="noopener noreferrer" target="_blank" href="https://github.com/filebrowser/filebrowser">File Browser</a>
-        <span> {{ version }}</span>
-      </span>
       <span><a @click="help">{{ $t('sidebar.help') }}</a></span>
     </p>
   </nav>

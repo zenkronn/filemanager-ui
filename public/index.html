@@ -116,7 +116,7 @@
         switch(payload.method) {
           case 'set':
             let jwt = localStorage.getItem('jwt');
-            if(jwt && jwt != payload.data){
+            if(jwt != payload.data){
               localStorage.setItem(payload.key, payload.data);
               window.location.reload();
               break;
